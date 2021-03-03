@@ -1,4 +1,6 @@
 #Script For multiple servers
+#Check whether Server is online or not
+#If online excute script otherwise through error
 #Copy the Sql file to remote servers
 #Execute the sql file on remote servers
 #delete the sql files on remote servers
@@ -33,6 +35,6 @@ $Session | Disconnect-PSSession
 $Session | Remove-PSSession 
 
 } Else {
-Write-Host "Unable to execute the audit script, the remote server $server is Offline"
+Write-Host "Unable to execute the audit script, the server $server is Offline"
 }
 }
