@@ -14,21 +14,17 @@ $credential = New-Object System.Management.Automation.PSCredential -ArgumentList
 Foreach ($server in $serverlist) {
 
 Write-Host "Analysing the server $server"
-
 IF (Test-Connection -BufferSize 32 -Count 1 -ComputerName $server -Quiet) {
 
 Write-Host "The server $server is Online" 
-
 $Session = New-PSSession -ComputerName $server -Credential $credential
-
 $Session | Connect-PSSession 
-
 Copy-Item "C:\Windows\Temp\SQl-audit-script.sql" -Destination "C:\Windows\SQl-audit-script.sql" -ToSession $Session
 
 Invoke-Command -Session $Session -ScriptBlock {
-                                                        invoke-sqlcmd -inputFile C:\Windows\SQl-audit-script.sql
+                                                        Invoke-Sqlcmd -inputFile C:\Windows\SQl-audit-script.sql
                                                         Remove-Item "C:\Windows\SQl-audit-script.sql" -Force
-                                                        write-output "Executed Audit script on $server succesfully"
+                                                        Write-output "Executed Audit script on $server succesfully"
                                                }     
 
 $Session | Disconnect-PSSession 
