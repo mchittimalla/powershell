@@ -1,0 +1,76 @@
+/usr/lib/python2.7/site-packages/ansible/parsing/vault/__init__.py:41: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in a future release.
+  from cryptography.exceptions import InvalidSignature
+ansible-playbook 2.9.4
+  config file = /tmp/awx_1170742_hjznq4zp/project/ansible.cfg
+  configured module search path = [u'/var/lib/awx/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Aug 13 2020, 02:51:10) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+Using /tmp/awx_1170742_hjznq4zp/project/ansible.cfg as config file
+SSH password: 
+BECOME password[defaults to SSH password]: 
+host_list declined parsing /tmp/awx_1170742_hjznq4zp/tmpynm61v73 as it did not pass its verify_file() method
+Parsed /tmp/awx_1170742_hjznq4zp/tmpynm61v73 inventory source with script plugin
+
+PLAYBOOK: GDBAtablespace-role.yml **********************************************
+1 plays in GDBAtablespace-role.yml
+
+PLAY [ptseelm-ax2132.ikeadt.com] ***********************************************
+
+TASK [Gathering Facts] *********************************************************
+task path: /tmp/awx_1170742_hjznq4zp/project/GDBAtablespace-role.yml:2
+<ptseelm-ax2132.ikeadt.com> ESTABLISH SSH CONNECTION FOR USER: rambv
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 ptseelm-ax2132.ikeadt.com '/bin/sh -c '"'"'echo ~rambv && sleep 0'"'"''
+<ptseelm-ax2132.ikeadt.com> (0, '/home/rambv\\n', "Warning: Permanently added 'ptseelm-ax2132.ikeadt.com,10.230.7.127' (ECDSA) to the list of known hosts.\\r\\n\\n                   This computer is the property of IKEA.\\n                     Unauthorized access is prohibited.\\n                If you are not authorized to have access to\\n                         this computer, leave now.\\n            All sessions on this computer can and may be monitored.\\n\\n")
+<ptseelm-ax2132.ikeadt.com> ESTABLISH SSH CONNECTION FOR USER: rambv
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 ptseelm-ax2132.ikeadt.com '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /var/tmp/ansible-tmp-1615388286.09-154675297176045 `" && echo ansible-tmp-1615388286.09-154675297176045="` echo /var/tmp/ansible-tmp-1615388286.09-154675297176045 `" ) && sleep 0'"'"''
+<ptseelm-ax2132.ikeadt.com> (0, 'ansible-tmp-1615388286.09-154675297176045=/var/tmp/ansible-tmp-1615388286.09-154675297176045\\n', '')
+Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+<ptseelm-ax2132.ikeadt.com> PUT /var/lib/awx/.ansible/tmp/ansible-local-3nK10iW/tmpo9N_z0 TO /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 sftp -o BatchMode=no -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 '[ptseelm-ax2132.ikeadt.com]'
+<ptseelm-ax2132.ikeadt.com> (0, 'sftp> put /var/lib/awx/.ansible/tmp/ansible-local-3nK10iW/tmpo9N_z0 /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py\\n', '')
+<ptseelm-ax2132.ikeadt.com> ESTABLISH SSH CONNECTION FOR USER: rambv
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 ptseelm-ax2132.ikeadt.com '/bin/sh -c '"'"'setfacl -m u:oracle:r-x /var/tmp/ansible-tmp-1615388286.09-154675297176045/ /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py && sleep 0'"'"''
+<ptseelm-ax2132.ikeadt.com> (127, '', '/bin/sh: setfacl:  not found.\\n')
+<ptseelm-ax2132.ikeadt.com> Failed to connect to the host via ssh: /bin/sh: setfacl:  not found.
+<ptseelm-ax2132.ikeadt.com> ESTABLISH SSH CONNECTION FOR USER: rambv
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 ptseelm-ax2132.ikeadt.com '/bin/sh -c '"'"'chmod u+x /var/tmp/ansible-tmp-1615388286.09-154675297176045/ /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py && sleep 0'"'"''
+<ptseelm-ax2132.ikeadt.com> (0, '', '')
+<ptseelm-ax2132.ikeadt.com> ESTABLISH SSH CONNECTION FOR USER: rambv
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 ptseelm-ax2132.ikeadt.com '/bin/sh -c '"'"'chown oracle /var/tmp/ansible-tmp-1615388286.09-154675297176045/ /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py && sleep 0'"'"''
+<ptseelm-ax2132.ikeadt.com> (1, '', 'chown: /var/tmp/ansible-tmp-1615388286.09-154675297176045/: Operation not permitted.\\nchown: /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py: Operation not permitted.\\n')
+<ptseelm-ax2132.ikeadt.com> Failed to connect to the host via ssh: chown: /var/tmp/ansible-tmp-1615388286.09-154675297176045/: Operation not permitted.
+chown: /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py: Operation not permitted.
+[WARNING]: Using world-readable permissions for temporary files Ansible needs
+to create when becoming an unprivileged user. This may be insecure. For
+information on securing this, see https://docs.ansible.com/ansible/become.html
+#becoming-an-unprivileged-user
+
+<ptseelm-ax2132.ikeadt.com> ESTABLISH SSH CONNECTION FOR USER: rambv
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 ptseelm-ax2132.ikeadt.com '/bin/sh -c '"'"'chmod a+rx /var/tmp/ansible-tmp-1615388286.09-154675297176045/ /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py && sleep 0'"'"''
+<ptseelm-ax2132.ikeadt.com> (0, '', '')
+<ptseelm-ax2132.ikeadt.com> ESTABLISH SSH CONNECTION FOR USER: rambv
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 -tt ptseelm-ax2132.ikeadt.com '/bin/sh -c '"'"'sudo -H -S  -p "[sudo via ansible, key=syywmuhsykeydkseleaowhgqvizjqaol] password:" -u oracle /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-syywmuhsykeydkseleaowhgqvizjqaol ; /usr/bin/python /var/tmp/ansible-tmp-1615388286.09-154675297176045/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+Escalation succeeded
+<ptseelm-ax2132.ikeadt.com> (1, '\\r\\n', 'Shared connection to ptseelm-ax2132.ikeadt.com closed.\\r\\n')
+<ptseelm-ax2132.ikeadt.com> Failed to connect to the host via ssh: Shared connection to ptseelm-ax2132.ikeadt.com closed.
+<ptseelm-ax2132.ikeadt.com> ESTABLISH SSH CONNECTION FOR USER: rambv
+<ptseelm-ax2132.ikeadt.com> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'User="rambv"' -o ConnectTimeout=10 -o ControlPath=/tmp/awx_1170742_hjznq4zp/cp/aafb66be08 ptseelm-ax2132.ikeadt.com '/bin/sh -c '"'"'rm -f -r /var/tmp/ansible-tmp-1615388286.09-154675297176045/ > /dev/null 2>&1 && sleep 0'"'"''
+<ptseelm-ax2132.ikeadt.com> (0, '', '')
+fatal: [ptseelm-ax2132.ikeadt.com]: FAILED! => {
+    "ansible_facts": {}, 
+    "changed": false, 
+    "failed_modules": {
+        "setup": {
+            "failed": true, 
+            "module_stderr": "Shared connection to ptseelm-ax2132.ikeadt.com closed.\\r\\n", 
+            "module_stdout": "\\r\\n", 
+            "msg": "MODULE FAILURE\\nSee stdout/stderr for the exact error", 
+            "rc": 1
+        }
+    }, 
+    "msg": "The following modules failed to execute: setup\\n"
+}
+
+PLAY RECAP *********************************************************************
+ptseelm-ax2132.ikeadt.com  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
